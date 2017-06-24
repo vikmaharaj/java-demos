@@ -6,19 +6,19 @@
 image: maven:3.3.3
 
 pipelines:
-#  default:
-#    - step:
-#        script: # Modify the commands below to build your repository.
-#           - mvn clean install
-#           - mvn -V -B -s settings.xml deploy
+  default:
+    - step:
+        script: # Modify the commands below to build your repository.
+           - mvn clean install
+           - mvn -V -B -s settings.xml deploy
   custom:
     release:
     - step:
         script: # testing manual triggers
            - mvn -B clean release:prepare release:perform
-  branches:
-    snapshot:
-    - step:
-        script: # Modify the commands below to build your repository.
-           - mvn clean install
-           - mvn -V -B -s settings.xml deploy
+#  branches:
+#    snapshot:
+#    - step:
+#        script: # Modify the commands below to build your repository.
+#           - mvn clean install
+#           - mvn -V -B -s settings.xml deploy
