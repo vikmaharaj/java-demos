@@ -11,3 +11,7 @@ pipelines:
         script: # Modify the commands below to build your repository.
 #          - mvn clean install
            - mvn -V -B -s settings.xml deploy
+  custom:
+    - step:
+        script: # testing manual triggers
+           - mvn -B clean release:prepare release:perform
