@@ -14,7 +14,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>	
 	</properties>
 	
-	<distributionManagement>
+	<!--<distributionManagement>
 		<site>
 			<id>site</id>
 			<name>Internal site to host project reports and documents</name>
@@ -29,6 +29,19 @@
 			<id>snapshots</id>
 			<name>Internal Snapshots</name>
 			<url>http://localhost:8081/nexus/content/repositories/snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>-->
+
+	<!-- Distrbution Management to deploy file in central repository -->
+
+	<distributionManagement>
+		<repository>
+			<id>ossrh</id>
+                        <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+		<repository>
+		<snapshotRepository>
+	        	<id>ossrh</id>
+	  		<url>https://oss.sonatype.org/content/repositories/snapshots</url>
 		</snapshotRepository>
 	</distributionManagement>
 	
@@ -188,6 +201,18 @@
 					</execution>
 				</executions>
 			</plugin>
+			<plugin>
+			        <groupId>org.sonatype.plugins</groupId>
+			        <artifactId>nexus-staging-maven-plugin</artifactId>
+			        <version>1.6.7</version>
+			        <extensions>true</extensions>
+			        <configuration>
+			        	<serverId>ossrh</serverId>
+				        <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+					<!-- Set this to true and the release will automatically proceed and sync to Central Repository will follow  -->
+				        <autoReleaseAfterClose>true</autoReleaseAfterClose>
+        			</configuration>
+      			</plugin>
 		</plugins>
 	</build>
 	
