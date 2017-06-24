@@ -17,6 +17,7 @@ pipelines:
         script: # testing manual triggers
            - git config user.email "kulbhushanm@thinknyx.com"
            - git config user.name "Kulbhushan Mayer"
+           - git reset --hard origin/master
            - mvn -B clean release:prepare release:perform
 #  branches:
 #    snapshot:
