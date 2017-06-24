@@ -15,6 +15,8 @@ pipelines:
     release:
     - step:
         script: # testing manual triggers
+           - git config user.email "kulbhushanm@thinknyx.com"
+           - git config user.name "Kulbhushan Mayer"
            - mvn -B clean release:prepare release:perform
 #  branches:
 #    snapshot:
