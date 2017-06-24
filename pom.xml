@@ -49,6 +49,7 @@
 	<scm>
 		<connection>scm:git:https://kulbhushan_mayer@bitbucket.org/thinknyx/maven_web_application.git</connection>
 		<developerConnection>scm:git:https://kulbhushan_mayer@bitbucket.org/thinknyx/maven_web_application.git</developerConnection>
+		<tag>HEAD</tag>	
 	</scm>
 	
 	<issueManagement>
