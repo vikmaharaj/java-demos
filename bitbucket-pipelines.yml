@@ -18,7 +18,7 @@ pipelines:
            - git config user.email "kulbhushanm@thinknyx.com"
            - git config user.name "Kulbhushan Mayer"
            - git reset --hard origin/master
-           - mvn -B clean release:prepare release:perform
+           - mvn -B clean release:prepare release:perform -Dusername=kulbhushan_mayer -Dpassword=india@123
 #  branches:
 #    snapshot:
 #    - step:
