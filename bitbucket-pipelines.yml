@@ -17,7 +17,7 @@ pipelines:
         script: # testing manual triggers
            - git config user.email "kulbhushanm@thinknyx.com"
            - git config user.name "Kulbhushan Mayer"
-		       - git checkout master
+           - git checkout master
            - mvn -V -B -s settings.xml clean release:prepare release:perform -Dusername=kulbhushan_mayer -Dpassword=india@123
 #  branches:
 #    snapshot:
