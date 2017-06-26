@@ -18,6 +18,8 @@ pipelines:
            - git config user.email "kulbhushanm@thinknyx.com"
            - git config user.name "Kulbhushan Mayer"
            - git checkout master
+           - openssl aes-256-cbc -pass pass:$OPENSSL_PWD -in private-key.gpg.enc -out private-key.gpg -d
+           - gpg --import private-key.gpg
            - mvn -V -B -s settings.xml clean release:prepare release:perform -Dusername=kulbhushan_mayer -Dpassword=india@123
 #  branches:
 #    snapshot:
