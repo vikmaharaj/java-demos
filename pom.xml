@@ -5,7 +5,7 @@
 	<groupId>com.thinknyx</groupId>
 	<artifactId>my-webapp</artifactId>
 	<packaging>war</packaging>
-	<version>1.2-SNAPSHOT</version>
+	<version>1.2</version>
 	<name>my-webapp Maven Webapp</name>
  
 	<description>A demo for deployment to the Central Repository via OSSRH using Bitbucket Pipeline</description>
@@ -65,7 +65,7 @@
 		<connection>scm:git:https://kulbhushan_mayer@bitbucket.org/thinknyx/maven_web_application.git</connection>
 		<developerConnection>scm:git:[fetch=]https://bitbucket.org/thinknyx/maven_web_application[push=]https://kulbhushan_mayer@bitbucket.org/thinknyx/maven_web_application.git</developerConnection>
 		<url>https://bitbucket.org/thinknyx/maven_web_application</url>
-		<tag>HEAD</tag>	
+		<tag>my-webapp-1.2</tag>	
 	</scm>
 	
 	<issueManagement>
