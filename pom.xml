@@ -7,8 +7,24 @@
 	<packaging>war</packaging>
 	<version>1.2-SNAPSHOT</version>
 	<name>my-webapp Maven Webapp</name>
-	<url>http://maven.apache.org</url>
-  
+ 
+	<description>A demo for deployment to the Central Repository via OSSRH using Bitbucket Pipeline</description>
+	<url>https://bitbucket.org/thinknyx/maven_web_application</url>
+	<licenses>
+	    	<license>
+	      		<name>The Apache Software License, Version 2.0</name>
+		      	<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+	    	</license>
+	</licenses>
+  	<developers>
+    		<developer>
+      			<name>Kulbhushan Mayer</name>
+		        <email>kulbhushan.mayer@thinknyx.com</email>
+			<organization>thinkyx technologies llp</organization>
+		        <organizationUrl>http://www.simpligility.com</organizationUrl>
+		</developer>
+	</developers>
+ 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>	
