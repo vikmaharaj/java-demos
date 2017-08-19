@@ -1,5 +1,5 @@
 <html>
 <body>
-<h2>Hello Thinknyx!</h2>
+<h2>Hello Thinknyx Technologies!</h2>
 </body>
 </html>
