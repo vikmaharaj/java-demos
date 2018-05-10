@@ -36,11 +36,11 @@
 			<name>Internal site to host project reports and documents</name>
 			<url>file:/E:/Tools/sonatype-work/nexus/storage/site/${project.artifactId}/${project.version}</url>
 		</site>
-		<repository>
-			<id>releases</id>
-			<name>Internal Releases</name>
-			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-		</repository>
+			<repository>
+				<id>releases</id>
+				<name>Internal Releases</name>
+				<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+			</repository>
 		<snapshotRepository>
 			<id>snapshots</id>
 			<name>Internal Snapshots</name>
@@ -52,12 +52,12 @@
 
 	<distributionManagement>
 		<repository>
-			<id>ossrh</id>
-                        <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+			<id>nexus</id>
+                        <url>http://84.39.48.145:8086/nexus/content/repositories/snapshots</url>
 		</repository>
 		<snapshotRepository>
-	        	<id>ossrh</id>
-	  		<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+	        	<id>nexus</id>
+	  		<url>http://84.39.48.145:8086/nexus/content/repositories/snapshots</url>
 		</snapshotRepository>
 	</distributionManagement>
 	
@@ -115,8 +115,8 @@
 				<groupId>org.apache.tomcat.maven</groupId>
 				<artifactId>tomcat7-maven-plugin</artifactId>
 				<version>2.2</version>
-				<configuration>
 					<url>http://84.39.48.145:8080/manager/text</url>
+				<configuration>
 					<server>TomcatServer</server>
 					<path>/my-webapp</path>
 				</configuration>
