@@ -53,7 +53,7 @@
 	<distributionManagement>
 		<repository>
 			<id>nexus</id>
-                        <url>http://84.39.48.145:8086/nexus/content/repositories/snapshots</url>
+                        <url>http://84.39.48.145:8086/nexus/content/repositories/releases/</url>
 		</repository>
 		<snapshotRepository>
 	        	<id>nexus</id>
