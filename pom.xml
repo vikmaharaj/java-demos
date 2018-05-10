@@ -115,9 +115,9 @@
 				<groupId>org.apache.tomcat.maven</groupId>
 				<artifactId>tomcat7-maven-plugin</artifactId>
 				<version>2.2</version>
-					<url>http://84.39.48.145:8080/manager/text</url>
 				<configuration>
 					<server>TomcatServer</server>
+					<url>http://84.39.48.145:8080/manager/text</url>
 					<path>/my-webapp</path>
 				</configuration>
 			</plugin>
