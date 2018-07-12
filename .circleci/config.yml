@@ -39,8 +39,11 @@ jobs:
         
       # run tests!
       - run: mvn integration-test
-      - run: curl -k -u iris:iris https://ec2-35-167-75-197.us-west-2.compute.amazonaws.com/api/qualitygates/project_status?projectKey=com.paloaltonetworks:unified-service > output.txt
-      - run: var1=`cat output.txt | awk '{split($0,a,":"); print a[3]}'`
-      - run: var2=`echo $var1 | awk '{split($0,a,","); print a[1]}'`
-      - run: status=`echo $var2 | awk '{split($0,a,"\""); print a[2]}'`
-      - run: if [ "$status" = "ERROR" ]; then echo "Quality Gate is Failed, failing build"; exit 1; fi;
+      - run: 
+          name: Failing build
+          command: |
+            curl -k -u iris:iris https://ec2-35-167-75-197.us-west-2.compute.amazonaws.com/api/qualitygates/project_status?projectKey=com.paloaltonetworks:unified-service > output.txt
+            var1=`cat output.txt | awk '{split($0,a,":"); print a[3]}'`
+            var2=`echo $var1 | awk '{split($0,a,","); print a[1]}'`
+            status=`echo $var2 | awk '{split($0,a,"\""); print a[2]}'`
+            if [ "$status" = "ERROR" ]; then echo "Quality Gate is Failed, failing build"; exit 1; fi;
