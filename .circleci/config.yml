@@ -39,4 +39,4 @@ jobs:
         
       # run tests!
       - run: mvn integration-test
-      - run: mvn sonar:sonar -Dsonar.url=https://ec2-35-167-75-197.us-west-2.compute.amazonaws.com
+      - run: mvn sonar:sonar -Dsonar.host.url=https://ec2-35-167-75-197.us-west-2.compute.amazonaws.com
