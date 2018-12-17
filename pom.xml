@@ -51,14 +51,14 @@
 	<!-- Distrbution Management to deploy file in central repository -->
 
 	<distributionManagement>
-		<repository>
-			<id>nexus</id>
-                        <url>http://84.39.48.145:8086/nexus/content/repositories/releases/</url>
-		</repository>
-		<snapshotRepository>
-	        	<id>nexus</id>
-	  		<url>http://84.39.48.145:8086/nexus/content/repositories/snapshots</url>
-		</snapshotRepository>
+        	<repository>
+	                <id>nexus</id>
+	                <url>http://84.39.39.130:8081/nexus/content/repositories/releases/</url>
+	        </repository>
+	        <snapshotRepository>
+                	<id>nexus</id>
+                	<url>http://84.39.39.130:8081/nexus/content/repositories/snapshots</url>
+        	</snapshotRepository>
 	</distributionManagement>
 	
 	<scm>
