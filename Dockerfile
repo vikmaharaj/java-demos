@@ -1,4 +1,4 @@
-FROM tomcat:latest
+FROM tomcat
 
 #RUN mkdir /config
 #COPY config.cfg /config
